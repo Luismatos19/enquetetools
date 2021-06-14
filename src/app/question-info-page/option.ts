@@ -1,4 +1,4 @@
-export class Options {
+export class Option {
   id: number;
   question_id: number;
   vote: number;

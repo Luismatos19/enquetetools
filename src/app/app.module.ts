@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './card/card.component';
 import { MatCardModule} from '@angular/material/card';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { QuestionInfoPageComponent } from './question-info-page/question-info-page.component';
+
 
 
 
@@ -20,6 +24,7 @@ import { MatCardModule} from '@angular/material/card';
     NavbarComponent,
     HomeComponent,
     CardComponent,
+    QuestionInfoPageComponent
 
   ],
   imports: [
@@ -27,9 +32,14 @@ import { MatCardModule} from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatProgressBarModule,
+    ProgressbarModule,
     RouterModule.forRoot([
      {
         path: '' , component: HomeComponent
+     },
+     {
+        path: 'enquetes/info/:id' , component: QuestionInfoPageComponent
      }
     ]),
     [HttpClientModule]

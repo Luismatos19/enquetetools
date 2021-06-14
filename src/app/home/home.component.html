@@ -1,6 +1,6 @@
-<div class="container">
+<div class="page-container">
   <div *ngFor="let question of questions">
-    <mat-card>
+    <mat-card [routerLink]="['/enquetes/info', question.id]">
 
       <mat-card-title>{{question.title}}</mat-card-title>
       <mat-card-subtitle>

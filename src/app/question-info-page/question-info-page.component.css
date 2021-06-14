@@ -1,0 +1,9 @@
+.mat-progress-bar {
+  height: 1.3rem;
+  width: 15rem;
+  border-radius: 5px;
+}
+
+.options {
+  margin-top: 2rem;
+}
