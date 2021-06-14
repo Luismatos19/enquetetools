@@ -11,6 +11,8 @@ export class CardComponent implements OnChanges {
   //valor a ser recebido pela tag desse componente
   @Input()
     id: number;
+    title: string;
+    description: string;
 
 
   ngOnChanges(): void {
