@@ -1,13 +1,9 @@
 <div class="page-container">
+  <div class="search">
+    <input matInput placeholder="Ex. Pizza" value="Sushi">
+  </div>
   <div *ngFor="let question of questions">
-    <mat-card [routerLink]="['/enquetes/info', question.id]">
 
-      <mat-card-title>{{question.title}}</mat-card-title>
-      <mat-card-subtitle>
-        {{question.description}}
-      </mat-card-subtitle>
-
-    </mat-card>
-
+    <app-card [idQuestion]="question.id" [title]='question.title' [description]="question.description"></app-card>
   </div>
 </div>

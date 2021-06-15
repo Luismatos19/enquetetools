@@ -34,7 +34,6 @@
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: gray;
 }
 
 html,
@@ -67,4 +66,5 @@ ul {
   background: white;
   margin-top: 1rem;
   border-radius: 5px;
+  text-align: center;
 }

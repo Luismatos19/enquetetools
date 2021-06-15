@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Option } from './option';
+import { Update } from './option';
 import { Question } from './question';
 import { QuestionService } from './question.service';
 
@@ -15,10 +16,14 @@ export class QuestionInfoPageComponent implements OnInit {
   question: Question;
   questionId: number;
   options: Option[] = [];
+  votes: Number;
+  update: Update;
 
   constructor(
     private questionService: QuestionService,
     private optionService: QuestionService,
+    private voteService: QuestionService,
+
     //pegando parametro id da url e quandando ele em question id
     private route: ActivatedRoute
     ) {
@@ -28,6 +33,9 @@ export class QuestionInfoPageComponent implements OnInit {
   ngOnInit(): void {
     this.getQuestionsById(this.questionId);
     this.getQuestionOptions(this.questionId)
+  }
+  ngOnChanges(): void {
+
   }
 
   // pega uma enquete com base no id
@@ -45,7 +53,18 @@ export class QuestionInfoPageComponent implements OnInit {
     this.optionService.getQuestionOptions(id).subscribe({
       next: option=> {
         this.options = option
-        console.log(option)
+
+      },
+      error:err => console.log('Error', err)
+    })
+  }
+
+  //update em votos
+  updateVote(id:number, body: number): void{
+    this.voteService.updateVote(id, body).subscribe({
+      next: vote=> {
+
+        console.log(vote)
       },
       error:err => console.log('Error', err)
     })

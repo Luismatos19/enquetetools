@@ -7,3 +7,7 @@
 .options {
   margin-top: 2rem;
 }
+
+td {
+  padding-right: 2rem;
+}

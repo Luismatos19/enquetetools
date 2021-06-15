@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './card/card.component';
 import { MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+
 import { QuestionInfoPageComponent } from './question-info-page/question-info-page.component';
 
 
@@ -33,7 +34,7 @@ import { QuestionInfoPageComponent } from './question-info-page/question-info-pa
     BrowserAnimationsModule,
     MatCardModule,
     MatProgressBarModule,
-    ProgressbarModule,
+    MatButtonModule,
     RouterModule.forRoot([
      {
         path: '' , component: HomeComponent
