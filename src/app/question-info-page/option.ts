@@ -4,3 +4,7 @@ export class Option {
   vote: number;
   name: string;
 }
+
+export class Update{
+  votes: number
+}

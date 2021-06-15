@@ -4,17 +4,26 @@
     <h3> {{question.description}}</h3>
     <p>Data de inicialização: {{question.initial_date | date: 'dd/MM/yyyy'}}</p> <!-- Pipe com a formatação de data -->
     <p>Data de finalização: {{question.final_date | date: 'dd/MM/yyyy'}}</p> <!-- Pipe com a formatação de data -->
-    <p> {{options[1]}} </p>
+
   </div>
 
   <div class="options">
     <table>
       <tr *ngFor=" let option of options">
-        <h4> {{option.name}} </h4>
+        <td>
+          <h4> {{option.name}} </h4>
+        </td>
+        <td>
+          <mat-progress-bar mode="determinate" value="{{option.vote}}"></mat-progress-bar>
+        </td>
+        <td>
+          <button mat-raised-button color="primary" (onclick)="updateVote(option.id, 1)">Votar</button>
+        </td>
+
 
       </tr>
     </table>
 
   </div>
-  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+
 </div>
