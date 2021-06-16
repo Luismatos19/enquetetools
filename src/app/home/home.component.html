@@ -1,9 +1,12 @@
 <div class="page-container">
   <div class="search">
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <input matInput placeholder="Procure por uma enquete" value="">
+
+    <button [routerLink]="'enquete/add'" mat-raised-button color="primary"> Criar Enquete</button>
   </div>
   <div *ngFor="let question of questions">
 
     <app-card [idQuestion]="question.id" [title]='question.title' [description]="question.description"></app-card>
   </div>
+  <pre></pre>
 </div>

@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,7 @@ import { MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { QuestionInfoPageComponent } from './question-info-page/question-info-page.component';
+import { AddQuestionComponent } from './add-question/add-question.component';
 
 
 
@@ -25,7 +28,8 @@ import { QuestionInfoPageComponent } from './question-info-page/question-info-pa
     NavbarComponent,
     HomeComponent,
     CardComponent,
-    QuestionInfoPageComponent
+    QuestionInfoPageComponent,
+    AddQuestionComponent
 
   ],
   imports: [
@@ -35,12 +39,17 @@ import { QuestionInfoPageComponent } from './question-info-page/question-info-pa
     MatCardModule,
     MatProgressBarModule,
     MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
     RouterModule.forRoot([
      {
         path: '' , component: HomeComponent
      },
      {
         path: 'enquetes/info/:id' , component: QuestionInfoPageComponent
+     },
+     {
+        path: 'enquete/add' , component: AddQuestionComponent
      }
     ]),
     [HttpClientModule]

@@ -1,0 +1,12 @@
+.form-question {
+  margin-top: 1rem;
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+
+mat-form-field {
+  width: 100%;
+}
